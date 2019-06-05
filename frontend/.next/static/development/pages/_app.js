@@ -4,13 +4,14 @@
 /*!****************************!*\
   !*** ./components/Cart.js ***!
   \****************************/
-/*! exports provided: LOCAL_STATE_QUERY, TOGGLE_CART_MUTATION, default */
+/*! exports provided: LOCAL_STATE_QUERY, TOGGLE_CART_MUTATION, CREATE_ORDER, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LOCAL_STATE_QUERY", function() { return LOCAL_STATE_QUERY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TOGGLE_CART_MUTATION", function() { return TOGGLE_CART_MUTATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CREATE_ORDER", function() { return CREATE_ORDER; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -192,13 +193,14 @@ function (_Component) {
         },
         __self: this
       }, function (_ref2) {
-        var me = _ref2.data.me;
+        var data = _ref2.data;
+        var me = data.me;
         if (!me) return null;
         return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_6__["Mutation"], {
           mutation: TOGGLE_CART_MUTATION,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 66
           },
           __self: this
         }, function (toggleCart) {
@@ -206,7 +208,7 @@ function (_Component) {
             query: LOCAL_STATE_QUERY,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 67
+              lineNumber: 68
             },
             __self: this
           }, function (_ref3) {
@@ -215,13 +217,13 @@ function (_Component) {
               open: data.cartOpen,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 69
+                lineNumber: 70
               },
               __self: this
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header", {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 70
+                lineNumber: 71
               },
               __self: this
             }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -229,47 +231,47 @@ function (_Component) {
               onClick: toggleCart,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 71
+                lineNumber: 72
               },
               __self: this
             }, "\xD7"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_10__["default"], {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 72
+                lineNumber: 73
               },
               __self: this
             }, me.name, "'s Cart"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 73
+                lineNumber: 74
               },
               __self: this
             }, "You have ", me.cart.length, " item", me.cart.length === 1 ? '' : 's', " in your cart")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 75
+                lineNumber: 76
               },
               __self: this
             }, me.cart.map(function (item) {
               return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_CartItem__WEBPACK_IMPORTED_MODULE_12__["default"], {
-                key: item.title,
+                key: item.id,
                 cartItem: item,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 76
+                  lineNumber: 77
                 },
                 __self: this
               });
             })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("footer", {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 78
+                lineNumber: 79
               },
               __self: this
             }, me.cart.length ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 82
+                lineNumber: 83
               },
               __self: this
             }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_14__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_13__["default"])(me.cart))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_6__["Mutation"], {
@@ -279,7 +281,7 @@ function (_Component) {
               }],
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 83
+                lineNumber: 84
               },
               __self: this
             }, function (createOrder) {
@@ -295,13 +297,13 @@ function (_Component) {
                 currency: "USD",
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 85
+                  lineNumber: 86
                 },
                 __self: this
               }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 94
+                  lineNumber: 95
                 },
                 __self: this
               }, "Checkout"));
@@ -936,11 +938,12 @@ var Page = function Page(_ref) {
 /*!**************************************!*\
   !*** ./components/RemoveFromcart.js ***!
   \**************************************/
-/*! exports provided: default */
+/*! exports provided: REMOVE_FROM_CART_MUTATION, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_FROM_CART_MUTATION", function() { return REMOVE_FROM_CART_MUTATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return RemoveFromcart; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -956,6 +959,8 @@ var _jsxFileName = "/Users/andela/Documents/projects/Advanced-React/sick-fits/fr
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -964,13 +969,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -1006,9 +1011,40 @@ function (_Component) {
   _inherits(RemoveFromcart, _Component);
 
   function RemoveFromcart() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, RemoveFromcart);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(RemoveFromcart).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(RemoveFromcart)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "update", function (cache, _ref) {
+      var removeFromCart = _ref.data.removeFromCart;
+
+      var _cache$readQuery = cache.readQuery({
+        query: _User__WEBPACK_IMPORTED_MODULE_5__["CURRENT_USER_QUERY"]
+      }),
+          me = _cache$readQuery.me;
+
+      var neededItems = me.cart.filter(function (item) {
+        return item.id !== removeFromCart.id;
+      });
+      cache.writeQuery({
+        query: _User__WEBPACK_IMPORTED_MODULE_5__["CURRENT_USER_QUERY"],
+        data: {
+          me: _objectSpread({}, me, {
+            cart: neededItems
+          })
+        }
+      });
+    });
+
+    return _this;
   }
 
   _createClass(RemoveFromcart, [{
@@ -1020,9 +1056,7 @@ function (_Component) {
         variables: {
           id: id
         },
-        refetchQueries: [{
-          query: _User__WEBPACK_IMPORTED_MODULE_5__["CURRENT_USER_QUERY"]
-        }],
+        update: this.update,
         optimisticResponse: {
           __typename: 'Mutation',
           removeFromCart: {
@@ -1032,11 +1066,11 @@ function (_Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 48
         },
         __self: this
-      }, function (removeFromCart, _ref) {
-        var loading = _ref.loading;
+      }, function (removeFromCart, _ref2) {
+        var loading = _ref2.loading;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Button, {
           title: "Delete Item",
           disabled: loading,
@@ -1047,7 +1081,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46
+            lineNumber: 61
           },
           __self: this
         }, "\xD7");
@@ -1411,7 +1445,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/andela/Documents/projects/Advanced-React/sick-fits/frontend/components/User.js";
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          description\n          image\n          title\n        }\n      }\n    }\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n      orders\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          description\n          image\n          title\n        }\n      }\n    }\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1433,7 +1467,7 @@ var User = function User(props) {
     query: CURRENT_USER_QUERY,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, function (payload) {
