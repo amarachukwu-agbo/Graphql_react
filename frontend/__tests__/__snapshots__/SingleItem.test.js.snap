@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SingleItem /> renders the data when it is fetched 1`] = `
+<h2>
+  Viewing 
+  dogs are best
+</h2>
+`;
+
+exports[`<SingleItem /> renders the data when it is fetched 2`] = `
+<img
+  alt="dogs are best"
+  src="dog-small.jpg"
+/>
+`;
+
+exports[`<SingleItem /> renders the data when it is fetched 3`] = `
+<p>
+  dogs
+</p>
+`;

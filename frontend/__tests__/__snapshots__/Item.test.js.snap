@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Item /> matches snapshot 1`] = `
+<ItemStyles__Item>
+  <img
+    alt="A chihuahua dog"
+    src="https://res.cloudinary.com/amara/sic-fits/dog.png"
+  />
+  <Title>
+    <Link
+      href={
+        Object {
+          "pathname": "/item",
+          "query": Object {
+            "id": "ctruinb198338",
+          },
+        }
+      }
+    >
+      <a>
+        A chihuahua dog
+      </a>
+    </Link>
+  </Title>
+  <PriceTag>
+    $5,000
+  </PriceTag>
+  <p>
+    A beautiful chihuahua dog
+  </p>
+  <div
+    className="buttonList"
+  >
+    <Link
+      href={
+        Object {
+          "pathname": "update",
+          "query": Object {
+            "id": "ctruinb198338",
+          },
+        }
+      }
+    >
+      <a>
+        Edit
+      </a>
+    </Link>
+    <AddToCart
+      id="ctruinb198338"
+    />
+    <DeleteItem
+      id="ctruinb198338"
+    >
+      Delete
+    </DeleteItem>
+  </div>
+</ItemStyles__Item>
+`;

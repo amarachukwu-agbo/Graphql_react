@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cart /> renders correctly and matches snapshot 1`] = `
+<header>
+  <CloseButton
+    onClick={[Function]}
+    title="close"
+  >
+    <button
+      className="CloseButton-sc-1seb878-0 lbNKfp"
+      onClick={[Function]}
+      title="close"
+    >
+      ×
+    </button>
+  </CloseButton>
+  <Supreme>
+    <h3
+      className="Supreme-xv30qb-0 hpaXsq"
+    >
+      Miss Coleman Berge
+      's Cart
+    </h3>
+  </Supreme>
+  <p>
+    You have 
+    1
+     item
+     in your cart
+  </p>
+</header>
+`;
+
+exports[`<Cart /> renders correctly and matches snapshot 2`] = `
+<ReactStripeCheckout
+  ComponentClass="span"
+  amount={15000}
+  className="StripeCheckout"
+  currency="USD"
+  description="Order of 3 items"
+  image="dog-small.jpg"
+  label="Pay With Card"
+  locale="auto"
+  name="Sick Fits"
+  reconfigureOnUpdate={false}
+  stripeKey="pk_test_4ApAJihRk5yShkglGcJ0ZSXV00oEwKYLu4"
+  token={[Function]}
+  triggerEvent="onClick"
+>
+  <span
+    onClick={[Function]}
+  >
+    <SickButton>
+      <button
+        className="SickButton-l04z44-0 kouXDz"
+      >
+        Checkout
+      </button>
+    </SickButton>
+  </span>
+</ReactStripeCheckout>
+`;
