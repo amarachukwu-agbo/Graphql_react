@@ -17,8 +17,7 @@ export const SIGN_UP_MUTATION = gql`
       name: $name
       ) {
       email,
-      name,
-      password
+      name
     }
   }
 `;
