@@ -11,16 +11,7 @@ export const CURRENT_USER_QUERY = gql`
       name
       permissions
       orders {
-        charge
-        total
-        createdAt
-        items {
-          title
-          description
-          image
-          price
-          quantity
-        }
+        id
       }
       cart {
         id
