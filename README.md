@@ -3,7 +3,7 @@ An online shopping platform built with Graphql and React
 
 
 ## Hosting
-* The Prisma server is hosted on https://hello-books-v2.herokuapp.com/api/v1/
+* The Prisma server is hosted on https://ama-sick-fits-prod-a842d36ded.herokuapp.com/
 * The Backend is hosted on https://amara-sick-fits-prod.herokuapp.com/
 * The Frontend is hosted on https://amara-sick-fits-next.herokuapp.com/
 
