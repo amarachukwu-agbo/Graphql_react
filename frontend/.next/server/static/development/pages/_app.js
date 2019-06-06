@@ -859,8 +859,8 @@ var Nav = function Nav() {
           lineNumber: 25
         },
         __self: this
-      }, "Orders")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: "/me",
+      }, "Orders")), me.permissions.includes('PERMISSIONUPDATE') || me.permissions.includes('ADMIN') && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        href: "/permissions",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
@@ -872,7 +872,7 @@ var Nav = function Nav() {
           lineNumber: 28
         },
         __self: this
-      }, "Account")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SignOut__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      }, "Permissions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_SignOut__WEBPACK_IMPORTED_MODULE_5__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
@@ -1544,7 +1544,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/andela/Documents/projects/Advanced-React/sick-fits/frontend/components/User.js";
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n      orders\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          description\n          image\n          title\n        }\n      }\n    }\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n      orders {\n        id\n      }\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          description\n          image\n          title\n        }\n      }\n    }\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -1566,7 +1566,7 @@ var User = function User(props) {
     query: CURRENT_USER_QUERY,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, function (payload) {
@@ -1741,15 +1741,17 @@ var Supreme = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.h3.withCo
 /*!*******************!*\
   !*** ./config.js ***!
   \*******************/
-/*! exports provided: endpoint, perPage */
+/*! exports provided: endpoint, prodEndpoint, perPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "endpoint", function() { return endpoint; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prodEndpoint", function() { return prodEndpoint; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "perPage", function() { return perPage; });
 // This is client side config only - don't put anything in here that shouldn't be public!
 var endpoint = "http://localhost:4444";
+var prodEndpoint = "https://amara-sick-fits-prod.herokuapp.com";
 var perPage = 4;
 
 /***/ }),

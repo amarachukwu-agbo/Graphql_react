@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -690,7 +690,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  mutation SIGN_UP_MUTATION(\n    $email: String!,\n    $password: String!,\n    $name: String!\n    ) {\n    signUp(\n      email: $email,\n      password: $password,\n      name: $name\n      ) {\n      email,\n      name,\n      password\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  mutation SIGN_UP_MUTATION(\n    $email: String!,\n    $password: String!,\n    $name: String!\n    ) {\n    signUp(\n      email: $email,\n      password: $password,\n      name: $name\n      ) {\n      email,\n      name\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -791,7 +791,7 @@ function (_Component) {
         }],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       }, function (signUp, _ref2) {
@@ -804,14 +804,14 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 56
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ErrorMessage__WEBPACK_IMPORTED_MODULE_5__["default"], {
           error: error,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 57
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", {
@@ -819,20 +819,20 @@ function (_Component) {
           "aria-busy": loading,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 58
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 60
+            lineNumber: 59
           },
           __self: this
         }, "Sign Up For An Account"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "email",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 61
+            lineNumber: 60
           },
           __self: this
         }, "Email", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -842,14 +842,14 @@ function (_Component) {
           onChange: _this2.onChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 63
+            lineNumber: 62
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "name",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 70
+            lineNumber: 69
           },
           __self: this
         }, "Name", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -859,14 +859,14 @@ function (_Component) {
           onChange: _this2.onChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 72
+            lineNumber: 71
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
           htmlFor: "password",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 78
           },
           __self: this
         }, "Password", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -876,7 +876,7 @@ function (_Component) {
           onChange: _this2.onChange,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 81
+            lineNumber: 80
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
@@ -884,7 +884,7 @@ function (_Component) {
           value: "Sign Up",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 88
+            lineNumber: 87
           },
           __self: this
         })));
@@ -920,7 +920,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/andela/Documents/projects/Advanced-React/sick-fits/frontend/components/User.js";
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n      orders\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          description\n          image\n          title\n        }\n      }\n    }\n  }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  query CURRENT_USER_QUERY {\n    me {\n      id\n      email\n      name\n      permissions\n      orders {\n        id\n      }\n      cart {\n        id\n        quantity\n        item {\n          id\n          price\n          description\n          image\n          title\n        }\n      }\n    }\n  }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -942,7 +942,7 @@ var User = function User(props) {
     query: CURRENT_USER_QUERY,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, function (payload) {
@@ -1039,7 +1039,7 @@ var signup = function signup() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*******************************!*\
   !*** multi ./pages/signup.js ***!
   \*******************************/

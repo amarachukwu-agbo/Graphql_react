@@ -24,9 +24,9 @@ const Nav = () => (
                   <Link href="/orders">
                     <a>Orders</a>
                   </Link>
-                  <Link href="/me">
-                    <a>Account</a>
-                  </Link>
+                  { me.permissions.includes('PERMISSIONUPDATE') || me.permissions.includes('ADMIN') && <Link href="/permissions">
+                    <a>Permissions</a>
+                  </Link> }
                   <SignOut />
                   <button onClick={toggleCart}>
                     My Cart
