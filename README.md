@@ -9,6 +9,7 @@ An online shopping platform built with Graphql and React
 
 ## Technologies used
 * JavaScript
+* Next
 * NodeJS
 * Yoga
 * Prisma
